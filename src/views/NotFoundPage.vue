@@ -2,7 +2,7 @@
   <div class="main">
     <h1 class="msgError">Oops!</h1>
     <h1>404</h1>
-    <h2>Page NotFound</h2>
+    <h2>Page Not Found</h2>
     <p>Desculpe, essa página não pôde ser encontrada!</p>
   </div>
 </template>
