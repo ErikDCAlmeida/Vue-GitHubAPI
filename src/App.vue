@@ -1,32 +1,69 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <Header />
+    <main>
+      <router-view class="container" />
+    </main>
+    <Footer />
   </div>
 </template>
 
+<script>
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+
+export default {
+  name: "Home",
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+a,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+main {
+  flex: 1;
+  display: flex;
+  .container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex: 1;
+  }
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+@media (max-width: 1100px) {
+  .container {
+    padding: 0px 5px;
   }
 }
 </style>
