@@ -61,6 +61,9 @@
       seu nome ser redirecionado a uma página com informações mais detalhadas
       sobre o criador do projeto. Também é possível clicar no campo "aqui!" para
       ser direcionado à página do GitHub que contém o projeto e seus arquivos.
+      Após fazer isso, ficará salvo o projeto mais recente visitado na tela
+      <strong>Home</strong>, você poderá encontrá-lo na área de
+      <strong>Projetos visitados recentemente</strong>.
     </p>
     <p>
       Clicando na estrela, você irá favoritar o repositório, ele estará

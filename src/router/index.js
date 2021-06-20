@@ -42,12 +42,20 @@ const routes = [
     props: true,
     component: () =>
       import(/* webpackChunkName: "search" */ "../views/SearchResult.vue"),
+    beforeEnter: (to, from, next) => {
+      document.title = to.meta.title || "Search";
+      next();
+    },
   },
   {
     path: "/user/:id",
     name: "User",
     props: true,
     component: () => import(/* webpackChunkName: "user"*/ "../views/User.vue"),
+    beforeEnter: (to, from, next) => {
+      document.title = to.meta.title || "User";
+      next();
+    },
   },
   {
     path: "*",

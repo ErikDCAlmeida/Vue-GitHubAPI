@@ -177,6 +177,7 @@ export default {
 .areaGridInfosUser {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   padding: 10px;
   margin-top: 40px;
   .areaImageName {
@@ -420,6 +421,65 @@ export default {
         .areaStarsRepository {
           img {
             width: 23px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  .areaGridInfosUser {
+    row-gap: 50px;
+    .areaImageName {
+      grid-row: 1 / 2;
+      grid-column: 1 / 4;
+      display: flex;
+      justify-content: center;
+    }
+    .areaPersonalInfos {
+      grid-row: 2 / 3;
+      grid-column: 1 / 4;
+    }
+    .areaRepositories {
+      grid-row: 3 / 4;
+      grid-column: 1 / 4;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .areaGridInfosUser {
+    .areaImageName {
+      img {
+        width: 250px;
+      }
+    }
+    .areaPersonalInfos {
+      flex-direction: column;
+      .infos1 {
+        margin-right: 0px;
+        margin-bottom: 50px;
+      }
+    }
+    .areaRepositories {
+      margin-top: 0px;
+      .areaTop {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        .nameTop {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 350px) {
+  .areaGridInfosUser {
+    .areaRepositories {
+      .areaTop {
+        .nameTop {
+          span {
+            font-size: 2rem;
           }
         }
       }
