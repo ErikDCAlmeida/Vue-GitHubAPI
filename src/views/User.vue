@@ -79,7 +79,7 @@
         </div>
         <div v-for="(repo, index) in reposObject" :key="index" class="repo">
           <a :href="repo.html_url" target="_blank" class="link">
-            {{ repo.full_name }}
+            <p>{{ repo.full_name }}</p>
           </a>
           <p>- {{ repo.description ? repo.description : "Sem descrição!" }}</p>
           <div class="infosExtraRepository">
@@ -292,6 +292,10 @@ export default {
       }
       .email {
         position: relative;
+        a {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         &:hover::after {
           content: "E-mail";
           font-size: 13px;
@@ -395,8 +399,12 @@ export default {
       margin-bottom: 30px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.3);
       .link {
-        font-weight: 600;
-        font-size: 22px;
+        p {
+          font-weight: 600;
+          font-size: 22px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
       p {
         font-size: 15px;
@@ -427,7 +435,7 @@ export default {
     }
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 920px) {
   .areaGridInfosUser {
     row-gap: 50px;
     .areaImageName {
@@ -446,7 +454,7 @@ export default {
     }
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 690px) {
   .areaGridInfosUser {
     .areaImageName {
       img {
